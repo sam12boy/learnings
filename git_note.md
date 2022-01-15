@@ -17,4 +17,11 @@
 &emsp;&emsp;  1.将尚未进行版本控制的本地目录转换为 Git 仓库；  
 &emsp;&emsp;  2.从其它服务器 克隆 一个已存在的 Git 仓库。  
 
-2.1 
+2.1  初始化本地的仓库
+```
+$ git init
+$ git add 文件名1,文件名2
+$ git add 文件名3
+$ git commit -m "add some modify description"
+```
+
