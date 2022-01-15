@@ -12,3 +12,9 @@
 修改用户：```$ git config --global user.email "ABC@CDE.com"```   
 修改代码编辑器（可以改成Vim,Notepad++等等）：```$ git config core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"```  
 
+## 2. 建立git仓库  
+通常有两种获取 Git 项目仓库的方式：  
+&emsp;&emsp;  1.将尚未进行版本控制的本地目录转换为 Git 仓库；  
+&emsp;&emsp;  2.从其它服务器 克隆 一个已存在的 Git 仓库。  
+
+2.1 
