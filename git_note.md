@@ -25,3 +25,9 @@ $ git add 文件名3
 $ git commit -m "add some modify description"
 ```
 
+add 其实就是把文件摆在待推送的状态  
+commit就是执行这个推送
+
+**尽量不要使用 $git commit 后面不加参数**  
+因为不加参数之后，commit以后会跳到编辑器（windows下git Bash默认是vim编辑器）
+点 "i" ，并把光标移动到第一行进行编辑  编辑结束点ESC   然后输入":x"或":wq" 保存，退出并执行commit  
