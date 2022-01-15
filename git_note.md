@@ -30,4 +30,11 @@ commit就是执行这个推送
 
 **尽量不要使用 $git commit 后面不加参数**  
 因为不加参数之后，commit以后会跳到编辑器（windows下git Bash默认是vim编辑器）
-点 "i" ，并把光标移动到第一行进行编辑  编辑结束点ESC   然后输入":x"或":wq" 保存，退出并执行commit  
+点 "i" ，并把光标移动到第一行进行编辑  编辑结束点ESC   然后输入":x"或":wq" 保存，退出并执行commit 
+
+```
+$ git status————查看哪些文件add了，哪些修改了还没add.....
+$ git diff————查看add的文件与当前文件之间变化
+$ git diff --cached（或者 $ git diff --staged）————查看add的文件与上次commit的文件之间变化
+```
+
