@@ -55,6 +55,16 @@ $ git diff --cached（或者 $ git diff --staged）————查看add的文�
 ```$ git log --oneline --decorate //用了oneline参数比较简略，省略了提交人等信息```  
 **创建新分支,并立即切换**  
 ```git checkout -b <newbranchname>```   
+**删除分支**  
+```git checkout -d <branchname>```  
+**合并分支**  
+具体操作在3.3节中，简单的合并语句如下  
+```
+git checkout master
+git merge other
+```  
+实现的效果是把other和master合并，然后master分支移动到新的合并后节点（提交对象）去
+
 3.2 分支介绍  
 
 ![alt text](https://git-scm.com/book/en/v2/images/commit-and-tree.png)  
