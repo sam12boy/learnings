@@ -4,10 +4,10 @@ A: 简化spring的配置
 #### 2. Q:为什么要用spring，他好在哪里？
 A: 方便解耦，简化开发 
 
-#### 3. 在创建第一个springboot（spring web）中产生的问题
+#### 3. 在创建第一个spring应用（spring web）中产生的问题
 [参考资料](https://www.jetbrains.com/help/idea/your-first-spring-application.html)
 
-在如下的java代码中：  @后面这些分别有什么作用，哪里调用了sayHello这个方法
+在如下的java代码中： 1. @后面这些分别有什么作用 2/哪里调用了sayHello这个方法
 ```java
 package com.example.demo1;
 
@@ -33,3 +33,5 @@ public class Demo1Application {
 }
 
 ```
+
+
