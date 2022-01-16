@@ -45,3 +45,4 @@ $ git diff --cached（或者 $ git diff --staged）————查看add的文�
 **去除多余add的文件**  
 ```$ git restore --staged```  
 
+## 3. 分支
