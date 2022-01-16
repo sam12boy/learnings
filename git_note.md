@@ -48,10 +48,21 @@ $ git diff --cached（或者 $ git diff --staged）————查看add的文�
 ## 3. 分支
 3.1 分支操作  
 **添加分支**  
-```$ git branch 新分支名```
+```$ git branch 新分支名```  
 **切换（移动）分支**  
-```$ git checkout 分支名```
+```$ git checkout 分支名```  
 **查看历史分支（版本）**  
-```$ git log --oneline --decorate //用了oneline参数比较简略，省略了提交人等信息```
+```$ git log --oneline --decorate //用了oneline参数比较简略，省略了提交人等信息```  
 **创建新分支,并立即切换**  
-```git checkout -b <newbranchname>```
+```git checkout -b <newbranchname>```   
+3.2 分支介绍  
+
+![alt text](https://git-scm.com/book/en/v2/images/commit-and-tree.png)  
+上图中有三个部分：灰色为提交对象（树对象指针和提交信息），蓝绿色为树对象（目录结构，blob索引），黄色部分为blob对象（文件快照）  
+
+
+![alt text](https://git-scm.com/book/en/v2/images/commits-and-parents.png)  
+上图为不断提交的提交对象和树结构
+
+![alt text](https://git-scm.com/book/en/v2/images/branch-and-history.png)  
+上图为分支和提交历史，head指向的是当前分支
