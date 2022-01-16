@@ -103,5 +103,5 @@ git merge other
 $ git remote -v  //查看远程仓库
 $ git remote show <shortname>  //查看远程分支
 $ git remote add <shortname> <url>   //添加远程仓库
-$ git fetch <shortname>  //拉取仓库中没有的信息  
+$ git fetch <shortname>  //拉取仓库中没有的信息 **它并不会修改工作目录中的内容**，git pull 在大多数情况下它的含义是一个 git fetch 紧接着一个 git merge 命令
 $ git push origin master    //把master分支推送到远程origin分支
