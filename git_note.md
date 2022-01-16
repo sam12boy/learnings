@@ -96,3 +96,12 @@ git merge other
 
 ![alt text](https://git-scm.com/book/en/v2/images/basic-merging-2.png)  
 上图 合并的结果，新建了一个快照    
+
+## 4. 远程仓库  
+#### 4.1 添加，查看，拉取，推送远程仓库  
+```
+$ git remote -v  //查看远程仓库
+$ git remote show <shortname>  //查看远程分支
+$ git remote add <shortname> <url>   //添加远程仓库
+$ git fetch <shortname>  //拉取仓库中没有的信息  
+$ git push origin master    //把master分支推送到远程origin分支
