@@ -76,3 +76,23 @@ git merge other
 
 ![alt text](https://git-scm.com/book/en/v2/images/branch-and-history.png)  
 上图为分支和提交历史，head指向的是当前分支
+
+
+3.3 合并分支  
+这里先讨论两种情况，一种是合并同一条链上的分支，第二种是合并非同一链上的分支（前提不冲突） 
+##### 第一种、合并同一条链上分支  
+![alt text](https://git-scm.com/book/en/v2/images/basic-branching-4.png)  
+上图 合并前状态  
+
+![alt text](https://git-scm.com/book/en/v2/images/basic-branching-5.png)  
+上图 合并后状态  
+
+##### 第二种、合并非同一链上的分支  
+![alt text](https://git-scm.com/book/en/v2/images/basic-branching-6.png)  
+上图 合并前状态  
+
+![alt text](https://git-scm.com/book/en/v2/images/basic-merging-1.png)  
+上图 合并中所用的快照  
+
+![alt text](https://git-scm.com/book/en/v2/images/basic-merging-2.png)  
+上图 合并的结果，新建了一个快照    
