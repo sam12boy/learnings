@@ -1,5 +1,5 @@
 (前面做过的一些数组和单链表的题目后续复习的时候再写进本文档)  
-代码和思路主要参考以下地方 1、leetcode讨论区 2、https://github.com/wind-liang/leetcode
+代码和思路主要参考以下地方 1、leetcode讨论区 2、https://github.com/wind-liang/leetcode  
 希望自己从以下几个方面对待题目  
 #### 1. 刚开始思路
 #### 2. 刚开始代码  
@@ -61,4 +61,68 @@ class Solution {
 1、不要忘记把慢指针指向空  
 2、递归的算法还没看
 
+### [82. Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)   
+#### 1. 刚开始思路  
+刚开始我想，如果要在遍历的过程中，保证重复数不在结果中出现，就是要使 head.val!=head.next.val && head.next.val!= head.next.next.val  
+但是考虑到上面next.next触及的边界情况多了点，要是一个next还能拉出来讨论，于是想到从head开始  prev.val!=head.val && head.val!=head.next.val  
+#### 2. 刚开始代码  
+```java
+class Solution {
+    public ListNode deleteDuplicates(ListNode head) {
+        ListNode dummy=new ListNode(-999);
+        ListNode slow=dummy,prev=dummy;
+        while(head!=null){
+            if (head.next==null){
+                if (prev.val!=head.val){
+                    slow.next=head;
+                }
+                else{
+                    slow.next=null;
+                }
+                break;
+            }
+            System.out.println("slow:"+slow.val+" prev:"+prev.val+" head:"+head.val);
+            if (head.val!=prev.val && head.val!=head.next.val){   //head.next到null的情况单独讨论
+                slow.next=head;
+                slow=head;
+                prev=head;   //这一步应该是公共的
+            }
+            head=head.next;
+        }
+        return dummy.next;
+    }
+}
+```
+#### 3. 犯的错或者没想到的点  
+prev指针应该跟着head一起移动  
+#### 4. 新的思路  
+#### 5. 新的代码  
+```java
+class Solution {
+    public ListNode deleteDuplicates(ListNode head) {
+        ListNode dummy=new ListNode(-999);
+        ListNode slow=dummy,prev=dummy;
+        while(head!=null){
+            if (head.next==null){
+                if (prev.val!=head.val){
+                    slow.next=head;
+                }
+                else{
+                    slow.next=null;
+                }
+                break;
+            }
+            //System.out.println("slow:"+slow.val+" prev:"+prev.val+" head:"+head.val);
+            if (head.val!=prev.val && head.val!=head.next.val){   //head.next到null的情况单独讨论
+                slow.next=head;
+                slow=head;
+            }
+            prev=head;
+            head=head.next;
+        }
+        return dummy.next;
+    }
+}
+```
+#### 6. 总结及关联题目  
 
