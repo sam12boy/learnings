@@ -128,3 +128,20 @@ class Solution {
 1、有空可以看下wind-liang页面这个解法，他比我少用了一个指针记录当前不重复数字（还是说比我少个prev指针，反正就是少个指针）  
 2、有空看下递归解
 
+### [61. Rotate List](https://leetcode.com/problems/rotate-list/)   
+#### 1. 刚开始思路
+#### 2. 刚开始代码  
+#### 3. 犯的错或者没想到的点  
+#### 4. 新的思路  
+#### 5. 新的代码  
+#### 6. 总结及关联题目 
+
+
+### [61. Rotate List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)  
+Follow up: Could you do this in one pass?  
+#### 1. 刚开始思路
+#### 2. 刚开始代码  
+#### 3. 犯的错或者没想到的点  
+#### 4. 新的思路  
+#### 5. 新的代码  
+#### 6. 总结及关联题目 
