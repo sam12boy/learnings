@@ -139,8 +139,28 @@ class Solution {
 
 ### [61. Rotate List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)  
 Follow up: Could you do this in one pass?  
-#### 1. 刚开始思路
+#### 1. 刚开始思路  
+其实因为之前看过嘛，就是保证快慢指针之前的差为n
 #### 2. 刚开始代码  
+```java
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode dummy=new ListNode(0);
+        ListNode slow=dummy;slow.next=head;
+        ListNode fast=head;
+        for (int i=0;i<n;i++){
+            fast=fast.next;
+           
+        }
+        while (fast!=null){
+            slow=slow.next;
+            fast=fast.next;
+        }
+        slow.next=slow.next.next;
+        return dummy.next;
+    }
+}
+```
 #### 3. 犯的错或者没想到的点  
 #### 4. 新的思路  
 #### 5. 新的代码  
