@@ -305,3 +305,6 @@ public int strStr(String haystack, String needle) {
 }
 ```
 #### 6. 总结及关联题目  
+
+### [8. String to Integer (atoi)]（https://leetcode.com/problems/string-to-integer-atoi/）  (未做)
+
