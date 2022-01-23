@@ -250,3 +250,46 @@ class Solution {
 }
 ```
 #### 6. 总结及关联题目 
+
+
+### [28. Implement strStr()](https://leetcode.com/problems/swap-nodes-in-pairs/)   （https://leetcode.com/problems/implement-strstr/）
+#### 1. 刚开始思路  
+无非就是先遍历haystack 
+如果haystack和needle不同=>继续遍历haystack  
+否则=>将haystack和needle继续遍历   
+1、当needle遍历到头=>返回index   
+2、当haystack遍历到头，needle还未遍历到头，返回-1  
+3、当haystack和needle不等时，跳出循环  
+然后将之前遍历haystack的指针，指向当前位置（这步是错的）  
+#### 2. 刚开始代码  
+```java
+class Solution {
+    public int strStr(String haystack, String needle) {
+        if (needle.length()==0) return 0;
+        for (int i=0;i<haystack.length();i++){
+            int j=0,tmp=i;
+            while(haystack.charAt(tmp)==needle.charAt(j)){
+                tmp++;
+                j++;
+                //j++后 needle超边界 说明符合 返回i
+                if (j==needle.length()) return i;
+                //i++后 haystack超边界 如果needle还没超边界则返回 -1 否则返回i（就是上面的情况）
+                if (tmp==haystack.length()) return -1;
+            }
+            //i++;         
+        }
+        return -1;
+        
+    }
+}
+```
+#### 3. 犯的错或者没想到的点   
+1、漏掉的边界值，**这个面试的时候可以先和面试官确认**,就是needle为空的时候的返回值  
+2、> 然后将之前遍历haystack的指针，指向当前位置（这步是错的）  
+对于以下输入值
+>haystack:"mississippi"
+>needle:"issip"
+不应该跳到中间的is以后，应该重新回到前面的s后面
+#### 4. 新的思路  
+#### 5. 新的代码  
+#### 6. 总结及关联题目  
