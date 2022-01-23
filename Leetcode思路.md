@@ -179,3 +179,74 @@ class Solution {
 #### 4. 新的思路  
 #### 5. 新的代码  
 #### 6. 总结及关联题目 
+
+
+### [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)   
+#### 1. 刚开始思路  
+1.前后分别遍历，碰到非数字和字母就跳过
+#### 2. 刚开始代码   
+```java
+class Solution {
+    public boolean isPalindrome(String s) {
+        s=s.toLowerCase();
+        int i=0,j=s.length()-1;
+        while(i<j){
+            while (!isAlphanumeric(s.charAt(i))){
+                i++;
+            }
+            while (!isAlphanumeric(s.charAt(j))){
+                j--;
+            }
+            if (s.charAt(i)!=s.charAt(j)){
+                return false;
+            }
+            i++;
+            j--;
+        }
+        return true;
+    }
+    private boolean isAlphanumeric(char c){
+        if (c>='0'&& c<='9' || c>='a'&&c<='z'){
+            return true;
+        }
+        return false;
+    }
+}
+```
+#### 3. 犯的错或者没想到的点   
+没考虑到i,j不断走越界的情况，在",."这种反例下，s.charAt(i)!=s.charAt(j)这一句就会越界
+#### 4. 新的思路   
+仔细想了下，当把字符串整个都遍历完，仍然没有数字或者字母的情况说明，这个字符串去除数字和字母就是空字符，按照题意应该返回true
+#### 5. 新的代码   
+```java
+class Solution {
+    public boolean isPalindrome(String s) {
+        s=s.toLowerCase();
+        int i=0,j=s.length()-1;
+        while(i<j){
+            while (!isAlphanumeric(s.charAt(i))){
+                i++;
+                if (i==s.length()){
+                    return true;
+                }
+            }
+            while (!isAlphanumeric(s.charAt(j))){
+                j--;
+            }
+            if (s.charAt(i)!=s.charAt(j)){
+                return false;
+            }
+            i++;
+            j--;
+        }
+        return true;
+    }
+    private boolean isAlphanumeric(char c){
+        if (c>='0'&& c<='9' || c>='a'&&c<='z'){
+            return true;
+        }
+        return false;
+    }
+}
+```
+#### 6. 总结及关联题目 
