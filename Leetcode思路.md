@@ -308,3 +308,46 @@ public int strStr(String haystack, String needle) {
 
 ### [8. String to Integer (atoi)]（https://leetcode.com/problems/string-to-integer-atoi/）  (未做)
 
+
+### [67. Add Binary]（https://leetcode.com/problems/add-binary/）  
+#### 1. 刚开始思路   
+就是普通的二进制加法  
+#### 2. 刚开始代码  
+```java
+class Solution {
+    public String addBinary(String a, String b) {
+        int i=a.length()-1;int j=b.length()-1;int flag=0;StringBuilder res=new StringBuilder();
+        while (i>=0||j>=0){
+            //有一位加完了
+            if (i<0){
+                int gewei=(flag+b.charAt(j)-'0')%2;    
+                flag=(flag+b.charAt(j)-'0')/2;
+                res.insert(0,gewei);
+                --j;
+            }
+            else if (j<0){
+                int gewei=(flag+a.charAt(i)-'0')%2;    
+                flag=(flag+a.charAt(i)-'0')/2;
+                res.insert(0,gewei);
+                --i;
+            }
+            //两位都还没加完
+            else{
+                int gewei=(flag+a.charAt(i)-'0'+b.charAt(j)-'0')%2;    
+                flag=(flag+a.charAt(i)-'0'+b.charAt(j)-'0')/2;
+                res.insert(0,gewei);
+                --i;
+                --j;
+            }
+            
+        }
+        if(flag==1) res.insert(0,flag);
+        return res.toString();
+    }
+}
+```
+#### 3. 犯的错或者没想到的点  
+#### 4. 新的思路  
+#### 5. 新的代码  
+#### 6. 总结及关联题目  
+
