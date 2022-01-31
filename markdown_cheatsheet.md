@@ -77,4 +77,19 @@ ___
 **效果**  
 This is my [gitHub Homepage](https://github.com/sam12boy/)  
 **markdown写法**  
->This is my \[gitHub Homepage]\(https://github.com/sam12boy/)  
+>This is my \[gitHub Homepage]\(https://github.com/sam12boy/)   
+
+## 7. 图片
+**效果**   
+![Alt Text]()  
+**markdown写法**   
+> 就是比上面链接前面多加个感叹号
+>\!\[Alt Text](链接地址)   
+
+## 8. 上下标（用html标签实现）
+**效果**  
+n<sup>2</sup>    
+n<sub>2</sub>    
+**markdown写法**   
+> n\<sup>2<\/sup>   
+> n\<sub>2\</sub>   
