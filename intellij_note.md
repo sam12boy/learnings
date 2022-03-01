@@ -21,7 +21,10 @@ public void toString(){}
 ### 二、快捷键
 1、包含代码块（如if、try catch等）
 > 选中代码+ctrl+alt+t
+
 2、 public static void main()
 > psvm
+
 3、 System.out.println()
 > sout
+
