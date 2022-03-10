@@ -30,3 +30,6 @@ public void toString(){}
 
 4、快速生成变量名的快捷键 
 > Alt + Ctrl +V
+
+5、查看函数所有参数用法 
+> Ctrl + P
