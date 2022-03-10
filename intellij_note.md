@@ -28,3 +28,5 @@ public void toString(){}
 3、 System.out.println()
 > sout
 
+4、快速生成变量名的快捷键 
+> Alt + Ctrl +V
